@@ -20,9 +20,19 @@ android {
     kotlinOptions {
         jvmTarget = Version.jvmTarget
     }
+
+}
+
+dependencies {
+    implementation project(':materialintro')
+    implementation project(':swipemenu')
+    implementation project(':core')
+    implementation project(':tutorial')
+    implementation project(':domain')
 }
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
 }
+

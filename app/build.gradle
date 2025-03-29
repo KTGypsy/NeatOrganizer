@@ -42,5 +42,25 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    dependencies {
+        implementation project(':swipemenu')
+        implementation project(':materialintro')
+        implementation project(':routine')
+        implementation project(':note')
+        implementation project(':task')
+        implementation project(':core')
+        implementation project(':data')
+        implementation project(':database')
+        implementation project(':domain')
+        implementation project(':tutorial')
+
+        implementation 'io.insert-koin:koin-android:2.1.6'
+        implementation 'io.insert-koin:koin-core-ext:2.1.6'
+        implementation 'io.insert-koin:koin-android:2.1.6'
+        implementation 'io.insert-koin:koin-test:2.1.6'
+        implementation 'io.insert-koin:koin-android-viewmodel:2.1.6'
+//        implementation 'com.github.shripal17:MaterialIntroView-v2:2.2.0'
+    }
 }
 

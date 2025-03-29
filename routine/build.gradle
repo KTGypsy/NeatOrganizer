@@ -22,6 +22,12 @@ android {
     }
 }
 
+dependencies {
+    implementation project(':core')
+    implementation project(':swipemenu')
+    implementation project(':domain')
+}
+
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8

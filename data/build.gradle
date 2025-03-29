@@ -5,6 +5,7 @@ apply plugin: 'kotlin-kapt'
 
 apply from: Dependencies.dependency
 
+
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
@@ -17,4 +18,8 @@ android {
         targetSdkVersion Version.targetSdkVersion
         minSdkVersion Version.minSdkVersion
     }
+}
+
+dependencies {
+    implementation project(':database')
 }

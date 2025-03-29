@@ -2,10 +2,10 @@ apply plugin: "androidx.navigation.safeargs.kotlin"
 apply from: Dependencies.common
 
 dependencies {
-    implementation project(Module.swipeMenu)
-    implementation project(Module.domain)
-    implementation project(Module.core)
-    implementation project(Module.tutorial)
+//    implementation project(Module.swipeMenu)
+//    implementation project(Module.domain)
+//    implementation project(Module.core)
+//    implementation project(Module.tutorial)
 
     implementation Lifecycle.livedata
     implementation Lifecycle.ext
@@ -20,7 +20,7 @@ dependencies {
     implementation View.autoFitEditText
     implementation View.lottie
     implementation View.spectrum
-    implementation View.showcase
+//    implementation View.showcase
 
     implementation AppCompat.appCompat
 

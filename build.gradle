@@ -1,5 +1,4 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-
 buildscript {
     repositories {
         google()
@@ -13,13 +12,22 @@ buildscript {
     }
 }
 
+plugins {
+    id 'org.jetbrains.dokka' version '1.4.30'
+}
+
 allprojects {
     repositories {
         google()
         jcenter()
         maven { url 'https://maven.google.com'}
         maven { url 'https://jitpack.io' }
+        maven { url "https://dl.bintray.com/shripal17/codertainment" }
     }
+}
+
+subprojects {
+    apply plugin: 'org.jetbrains.dokka'
 }
 
 task clean(type: Delete) {

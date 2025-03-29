@@ -5,6 +5,7 @@ apply plugin: 'kotlin-kapt'
 
 apply from: Dependencies.dependency
 
+
 android {
     dataBinding {
         enabled = true
@@ -15,6 +16,10 @@ android {
     defaultConfig {
         targetSdkVersion Version.targetSdkVersion
         minSdkVersion Version.minSdkVersion
+    }
+    dependencies {
+        implementation 'io.insert-koin:koin-android:2.1.6'
+        implementation 'io.insert-koin:koin-core-ext:2.1.6'
     }
 }
 

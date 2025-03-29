@@ -1,12 +1,9 @@
 apply from: Dependencies.common
 
 dependencies {
-    implementation project(Module.core)
-
     implementation View.material
     implementation View.constraintLayout
     implementation View.lottie
-    implementation View.showcase
 
     implementation AppCompat.appCompat
 }

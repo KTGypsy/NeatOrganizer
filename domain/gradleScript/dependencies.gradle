@@ -1,7 +1,7 @@
 apply from: Dependencies.common
 
 dependencies {
-    implementation project(Module.data)
+//    implementation project(Module.data)
 
     implementation Lifecycle.livedata
     implementation Lifecycle.ext

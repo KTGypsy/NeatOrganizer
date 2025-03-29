@@ -22,11 +22,11 @@ object Module {
 
 object Koin {
     // impl
-    const val core = "org.koin:koin-android:${Version.koin_version}"
-    const val core_ext = "org.koin:koin-core-ext:${Version.koin_version}"
-    const val viewmodel = "org.koin:koin-android-viewmodel:${Version.koin_version}"
+    const val core = "io.insert-koin:koin-android:${Version.koin_version}"
+    const val core_ext = "io.insert-koin:koin-core-ext:${Version.koin_version}"
+    const val viewmodel = "io.insert-koin:koin-android-viewmodel:${Version.koin_version}"
     // testImpl
-    const val test = "org.koin:koin-test:${Version.koin_version}"
+    const val test = "io.insert-koin:koin-test:${Version.koin_version}"
 }
 
 object Glide {
@@ -93,7 +93,7 @@ object View {
     const val material = "com.google.android.material:material:${Version.material_version}"
     const val lottie = "com.airbnb.android:lottie:${Version.lottie_version}"
     const val spectrum = "com.thebluealliance:spectrum:${Version.spectrum_version}"
-    const val showcase = "com.github.shripal17:MaterialIntroView-v2:${Version.showcase_version}"
+    const val showcase = "com.codertainment.materialintro:materialintroview-v2:${Version.showcase_version}"
 }
 
 object AppCompat {

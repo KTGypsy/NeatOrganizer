@@ -1,17 +1,6 @@
 apply from: Dependencies.common
 
 dependencies {
-    implementation project(Module.swipeMenu)
-    implementation project(Module.routine)
-    implementation project(Module.note)
-    implementation project(Module.task)
-    implementation project(Module.core)
-    implementation project(Module.data)
-    implementation project(Module.database)
-    implementation project(Module.domain)
-    implementation project(Module.tutorial)
-
-
     implementation Glide.glide
     annotationProcessor Glide.compiler
 
