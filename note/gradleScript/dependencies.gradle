@@ -2,9 +2,6 @@ apply plugin: "androidx.navigation.safeargs.kotlin"
 apply from: Dependencies.common
 
 dependencies {
-//    implementation project(Module.domain)
-//    implementation project(Module.core)
-
     implementation Lifecycle.livedata
     implementation Lifecycle.ext
     implementation Lifecycle.runtime

@@ -5,7 +5,7 @@ object Version {
     const val gradleVersion = "4.1.2"
     const val compileSdkVersion = 29
     const val minSdkVersion = 26
-    const val targetSdkVersion = 29
+    const val targetSdkVersion = 35
     const val versionCode = 3
     const val versionName = "3.0"
     const val jvmTarget = "1.8"

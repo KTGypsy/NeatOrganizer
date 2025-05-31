@@ -5,6 +5,11 @@ apply plugin: 'kotlin-kapt'
 
 apply from: Dependencies.dependency
 
+kapt {
+    arguments {
+        arg("room.schemaLocation", "$projectDir/schemas".toString())
+    }
+}
 
 android {
     compileSdkVersion Version.compileSdkVersion

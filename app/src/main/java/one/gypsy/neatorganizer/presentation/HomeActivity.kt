@@ -56,9 +56,12 @@ internal class HomeActivity : AppCompatActivity() {
         return findNavController(R.id.fragment_activity_home_nav_container).navigateUp()
     }
 
-    private fun setUpBottomNavigation() = bottom_navigation_view_activity_home
-        .setupWithNavController(findNavController(R.id.fragment_activity_home_nav_container))
-
+    private fun setUpBottomNavigation() {
+        bottom_navigation_view_activity_home.setupWithNavController(findNavController(R.id.fragment_activity_home_nav_container))
+        bottom_navigation_view_activity_home.setOnNavigationItemReselectedListener {
+            // Do nothing to prevent fragment reloading
+        }
+    }
     private fun setUpLocationListener() {
         findNavController(R.id.fragment_activity_home_nav_container).addOnDestinationChangedListener { _, destination, _ ->
             if (destination.id == R.id.noteDetails) {

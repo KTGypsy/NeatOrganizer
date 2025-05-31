@@ -1,3 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="widget_creation_color_warning">Wähle eine Farbe</string>
+    <string-array name="schedule_days_short">
+        <item>Mo.</item>
+        <item>Di.</item>
+        <item>Mi.</item>
+        <item>Do.</item>
+        <item>Fr.</item>
+        <item>Sa.</item>
+        <item>So.</item>
+    </string-array>
+    <plurals name="subItemsCount">
+        <item quantity="one">Dieses %2$s besteht aus %1$d Aufgabe.</item>
+        <item quantity="other">Dieses %2$s besteht aus %1$d Aufgaben.</item>
+    </plurals>
+    <string name="remove_confirmation_dialog_fragment_content">Bist du sicher, dass du dieses Element löschen möchtest?</string>
+    <string name="submit_button_text">Bestätigen</string>
+    <string name="cancel_button_text">Abbrechen</string>
+    <string name="create_button_text">Erstellen</string>
+    <string name="next_button_text">Weiter</string>
+    <string name="list_item_menu_edit">Bearbeiten</string>
+    <string name="list_item_menu_add">Hinzufügen</string>
+    <string name="list_item_menu_delete">Löschen</string>
+    <string name="creation_date_prefix">Erstellt am %1$s</string>
+    <string name="bar_untitled_hint">Ohne Titel</string>
 </resources>

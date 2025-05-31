@@ -1,0 +1,398 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "1f84f83f74fcd7d0e5a6a86e4829521e",
+    "entities": [
+      {
+        "tableName": "single_tasks",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `groupId` INTEGER NOT NULL, `name` TEXT NOT NULL, `done` INTEGER NOT NULL, `createdAt` INTEGER NOT NULL, FOREIGN KEY(`groupId`) REFERENCES `single_task_group`(`id`) ON UPDATE CASCADE ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "groupId",
+            "columnName": "groupId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "done",
+            "columnName": "done",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "single_task_group",
+            "onDelete": "CASCADE",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "groupId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "single_task_group",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`name` TEXT NOT NULL, `id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `createdAt` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "routines",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`name` TEXT NOT NULL, `id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `createdAt` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "routine_schedules",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`monday` INTEGER NOT NULL, `tuesday` INTEGER NOT NULL, `wednesday` INTEGER NOT NULL, `thursday` INTEGER NOT NULL, `friday` INTEGER NOT NULL, `saturday` INTEGER NOT NULL, `sunday` INTEGER NOT NULL, `routineId` INTEGER NOT NULL, PRIMARY KEY(`routineId`), FOREIGN KEY(`routineId`) REFERENCES `routines`(`id`) ON UPDATE CASCADE ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "monday",
+            "columnName": "monday",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tuesday",
+            "columnName": "tuesday",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wednesday",
+            "columnName": "wednesday",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "thursday",
+            "columnName": "thursday",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "friday",
+            "columnName": "friday",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "saturday",
+            "columnName": "saturday",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sunday",
+            "columnName": "sunday",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "routineId",
+            "columnName": "routineId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "routineId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "routines",
+            "onDelete": "CASCADE",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "routineId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "routine_tasks",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`name` TEXT NOT NULL, `done` INTEGER NOT NULL, `routineId` INTEGER NOT NULL, `id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `createdAt` INTEGER NOT NULL, FOREIGN KEY(`routineId`) REFERENCES `routines`(`id`) ON UPDATE CASCADE ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "done",
+            "columnName": "done",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "routineId",
+            "columnName": "routineId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "routines",
+            "onDelete": "CASCADE",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "routineId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "routine_snapshots",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`routinesResetDate` INTEGER NOT NULL, `routineSnapshotId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "routinesResetDate",
+            "columnName": "routinesResetDate",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "routineSnapshotId",
+            "columnName": "routineSnapshotId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "routineSnapshotId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "task_widgets",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`widgetId` INTEGER NOT NULL, `taskGroupId` INTEGER NOT NULL, `color` INTEGER NOT NULL, PRIMARY KEY(`widgetId`))",
+        "fields": [
+          {
+            "fieldPath": "widgetId",
+            "columnName": "widgetId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "taskGroupId",
+            "columnName": "taskGroupId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "color",
+            "columnName": "color",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "widgetId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "notes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `title` TEXT NOT NULL, `content` TEXT NOT NULL, `createdAt` INTEGER NOT NULL, `color` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "content",
+            "columnName": "content",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "color",
+            "columnName": "color",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "note_widgets",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`widgetId` INTEGER NOT NULL, `noteId` INTEGER NOT NULL, `color` INTEGER NOT NULL, PRIMARY KEY(`widgetId`))",
+        "fields": [
+          {
+            "fieldPath": "widgetId",
+            "columnName": "widgetId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "noteId",
+            "columnName": "noteId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "color",
+            "columnName": "color",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "widgetId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '1f84f83f74fcd7d0e5a6a86e4829521e')"
+    ]
+  }
+}

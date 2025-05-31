@@ -27,9 +27,9 @@ internal class NoteEntityTest : DatabaseTest() {
             createdAt = System.currentTimeMillis(),
             color = 123123
         )
+        notesDao.insert(note)
 
         // when
-        notesDao.insert(note)
         val fetchedNotes = notesDao.getAllNotes()
 
         // then
@@ -47,10 +47,10 @@ internal class NoteEntityTest : DatabaseTest() {
             createdAt = System.currentTimeMillis(),
             color = 123123
         )
+        notesDao.insert(note)
         val updatedNote = note.copy(title = "updated one", content = "updated story")
 
         // when
-        notesDao.insert(note)
         notesDao.update(updatedNote)
         val fetchedNotes = notesDao.getAllNotes()
 
@@ -90,9 +90,9 @@ internal class NoteEntityTest : DatabaseTest() {
             createdAt = System.currentTimeMillis(),
             color = 123123
         )
+        notesDao.insert(note)
 
         // when
-        notesDao.insert(note)
         val fetchedNote = notesDao.getNoteByIdObservable(noteId)
 
         // then
@@ -127,9 +127,9 @@ internal class NoteEntityTest : DatabaseTest() {
                 color = 123123
             )
         )
+        notesDao.insert(*notes)
 
         // when
-        notesDao.insert(*notes)
         val fetchedNotesObservable = notesDao.getAllNotesObservable()
 
         // then
@@ -164,9 +164,9 @@ internal class NoteEntityTest : DatabaseTest() {
                 color = 1266654
             )
         )
+        notesDao.insert(*notes)
 
         // when
-        notesDao.insert(*notes)
         val fetchedNotes = notesDao.getAllNotes()
 
         // then

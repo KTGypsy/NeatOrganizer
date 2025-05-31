@@ -50,7 +50,7 @@
         <item name="android:paddingEnd">@dimen/normal_100</item>
         <item name="android:background">@drawable/blue_edit_text_background</item>
         <item name="android:layout_width">@dimen/normal_0</item>
-        <item name="android:layout_height">@dimen/normal_500</item>
+        <item name="android:layout_height">@dimen/normal_700</item>
     </style>
 
     <style name="FormButton">
