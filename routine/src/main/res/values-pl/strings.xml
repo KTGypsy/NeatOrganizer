@@ -1,3 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="add_routine_task_dialog_fragment_content_hint">Tytuł zadania</string>
+    <string name="add_routine_dialog_fragment_content_hint">Tytuł rutyny</string>
+    <string name="remove_routine_subject">rutyna</string>
+    <string name="add_routine_dialog_scheduled_days">Zaplanowane dni</string>
 </resources>

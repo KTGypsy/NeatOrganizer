@@ -17,6 +17,7 @@
             type="one.gypsy.neatorganizer.note.view.NoteEntriesAdapter" />
 
         <import type="one.gypsy.neatorganizer.core.listing.ContentLoadingStatusKt" />
+
         <import type="one.gypsy.neatorganizer.note.R" />
 
     </data>
@@ -32,6 +33,7 @@
             adapterData="@{viewModel.listedNotes}"
             hasFixedSize="@{true}"
             layoutManager="@{layoutManager}"
+            android:padding="@dimen/normal_100"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -1,3 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="note_widget_creation_task_warning">Notiz auswählen</string>
+    <string name="note_selection_title">Neue Notiz auswählen</string>
+    <string name="note_widget_missing_content_message">Notiz fehlt…\nTippen, um eine neue auszuwählen!</string>
+    <string name="add_note_dialog_fragment_color_header">Notizfarbe</string>
+    <string name="widget_note_configuration_title">Notiz auswählen</string>
+    <string name="add_note_dialog_fragment_content_hint">Titel der Notiz</string>
+    <string name="widget_selection_note_creation">Notiz erstellen</string>
 </resources>

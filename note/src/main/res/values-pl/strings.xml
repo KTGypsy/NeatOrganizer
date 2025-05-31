@@ -1,3 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="note_widget_creation_task_warning">Wybierz notatkę</string>
+    <string name="note_selection_title">Wybierz nową notatkę</string>
+    <string name="note_widget_missing_content_message">Brakuje notatki…\nStuknij, aby wybrać nową!</string>
+    <string name="add_note_dialog_fragment_color_header">Kolor notatki</string>
+    <string name="widget_note_configuration_title">Wybierz notatkę</string>
+    <string name="add_note_dialog_fragment_content_hint">Tytuł notatki</string>
+    <string name="widget_selection_note_creation">Utwórz notatkę</string>
 </resources>

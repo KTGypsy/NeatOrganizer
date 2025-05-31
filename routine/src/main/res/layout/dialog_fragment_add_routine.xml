@@ -2,6 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
             name="viewModel"
             type="one.gypsy.neatorganizer.routine.vm.AddRoutineViewModel" />
@@ -28,16 +29,29 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
+            <View
+                android:id="@+id/background"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/blue_edit_text_background"
+                app:layout_constraintStart_toStartOf="@id/text_view_dialog_fragment_scheduled_days"
+                app:layout_constraintTop_toTopOf="@id/text_view_dialog_fragment_scheduled_days"
+                app:layout_constraintEnd_toEndOf="@id/day_picker_dialog_fragment_add_task_group_schedule"
+                app:layout_constraintBottom_toBottomOf="@id/day_picker_dialog_fragment_add_task_group_schedule">
+            </View>
+
             <TextView
                 android:id="@+id/text_view_dialog_fragment_scheduled_days"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/ic_day_range_24"
-                android:gravity="center"
-                android:layout_marginStart="@dimen/normal_50"
-                android:text="@string/add_routine_dialog_scheduled_days"
                 android:layout_marginTop="@dimen/normal_100"
+                android:paddingTop="16dp"
+                android:paddingHorizontal="4dp"
+                android:drawableStart="@drawable/ic_day_range_24"
                 android:drawablePadding="@dimen/normal_100"
+                android:gravity="center"
+                android:textColor="@color/gray"
+                android:text="@string/add_routine_dialog_scheduled_days"
                 android:textSize="@dimen/text_normal_75"
                 app:layout_constraintStart_toStartOf="@+id/day_picker_dialog_fragment_add_task_group_schedule"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -58,7 +72,7 @@
                 android:id="@+id/edit_text_dialog_fragment_add_task_group_title"
                 style="@style/FormEditText"
                 android:layout_marginStart="@dimen/normal_200"
-                android:layout_marginTop="@dimen/normal_100"
+                android:layout_marginTop="@dimen/normal_200"
                 android:layout_marginEnd="@dimen/normal_200"
                 android:layout_marginBottom="@dimen/normal_200"
                 android:drawableStart="@drawable/ic_group_add_white_24"
@@ -70,9 +84,9 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_dialog_fragment_add_task_group_confirmation"
+                style="@style/FormButton.Submit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/FormButton.Submit"
                 android:layout_marginVertical="@dimen/normal_300"
                 android:onClick="@{() -> viewModel.addRoutine()}"
                 app:layout_constraintBottom_toBottomOf="parent"

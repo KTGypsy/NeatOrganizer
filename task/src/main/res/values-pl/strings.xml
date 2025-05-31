@@ -1,3 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="item_task_group_entry_tasks_ratio">%1$d / %2$d</string>
+    <string name="task_widget_creation_task_warning">Wybierz grupę zadań</string>
+    <string name="widget_tasks_empty_view_message">Brak elementów do wyświetlenia</string>
+    <string name="task_group_selection_title">Wybierz nową grupę zadań</string>
+    <string name="task_widget_missing_content_message">Brakuje grupy zadań…\nStuknij, aby wybrać nową!</string>
+    <string name="remove_group_subject">grupa</string>
+    <string name="add_task_group_dialog_fragment_content_hint">Tytuł grupy zadań</string>
+    <string name="add_task_dialog_fragment_content_hint">Tytuł zadania</string>
+    <string name="task_widget_untitled_hint">Grupa zadań bez tytułu</string>
+    <string name="selection_widget_group_create">Utwórz grupę</string>
 </resources>

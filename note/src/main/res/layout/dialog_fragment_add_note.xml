@@ -48,7 +48,10 @@
                 android:layout_marginTop="@dimen/normal_200"
                 android:drawableStart="@drawable/ic_brush_24"
                 android:drawablePadding="@dimen/normal_100"
+                android:paddingStart="8dp"
                 android:gravity="center"
+                android:textColor="@color/gray"
+                android:paddingTop="8dp"
                 android:text="@string/add_note_dialog_fragment_color_header"
                 android:textSize="@dimen/text_normal_75"
                 app:layout_constraintStart_toStartOf="@+id/newNoteTitle"
@@ -62,7 +65,7 @@
                 android:layout_marginTop="@dimen/normal_100"
                 android:padding="@dimen/normal_50"
                 app:layout_constraintEnd_toEndOf="@+id/newNoteTitle"
-                app:layout_constraintStart_toStartOf="@+id/newNoteTitle"
+                app:layout_constraintStart_toStartOf="@+id/noteColorHeader"
                 app:layout_constraintTop_toBottomOf="@+id/noteColorHeader"
                 app:spectrum_autoPadding="true"
                 app:spectrum_colors="@array/note_colors"
@@ -79,6 +82,17 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/palette" />
+            <View
+                android:id="@+id/background"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:elevation="-2dp"
+                android:background="@drawable/blue_edit_text_background"
+                app:layout_constraintStart_toStartOf="@id/noteColorHeader"
+                app:layout_constraintTop_toTopOf="@id/noteColorHeader"
+                app:layout_constraintEnd_toEndOf="@id/newNoteTitle"
+                app:layout_constraintBottom_toBottomOf="@id/palette">
+            </View>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="activity_home_bottom_navigation_menu_routines">Rutyny</string>
+    <string name="activity_home_bottom_navigation_menu_tasks">Zadania</string>
+    <string name="activity_home_bottom_navigation_menu_notes">Notatki</string>
 </resources>

@@ -63,8 +63,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".presentation.HomeActivity"
-            android:windowSoftInputMode="adjustPan" />
+            android:windowSoftInputMode="adjustResize"
+            android:name=".presentation.HomeActivity" />
 
         <service
             android:name="one.gypsy.neatorganizer.task.view.widget.remote.TaskWidgetService"
